@@ -1,0 +1,76 @@
+
+# ============================================
+# 模型文件（很大，不要 commit）
+# ============================================
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.pkl
+*.mdl
+*.msc
+*.mv
+
+# ============================================
+# 训练 checkpoint（很大）
+# ============================================
+results/finetuned/checkpoint-*/
+results/finetuned/*.pt
+results/finetuned/*.pth
+results/finetuned/*.bin
+results/finetuned/optimizer*.pt
+results/finetuned/scheduler*.pt
+results/finetuned/rng_state*.pth
+results/finetuned/trainer_state*.json
+
+# ============================================
+# Python 缓存
+# ============================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+
+# ============================================
+# IDE 配置
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================
+# 环境配置
+# ============================================
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# ============================================
+# 日志文件
+# ============================================
+*.log
+logs/
+
+# ============================================
+# 临时文件
+# ============================================
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# ============================================
+# 可选：推理结果（可以取消注释来保存）
+# ============================================
+# results/test1_result.json
+# results/test2_result.json
+# results/test1_result_demo.txt
+# results/test2_result_demo.txt
+# results/result.txt
+

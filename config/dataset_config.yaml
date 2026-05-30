@@ -1,0 +1,21 @@
+
+train_path: results/processed_data/train_split.jsonl
+val_path: results/processed_data/val_split.jsonl
+test1_path: results/processed_data/test1.jsonl
+test2_path: results/processed_data/test2.jsonl
+
+split_ratio:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+
+label_map:
+  0: "非仇恨言论"
+  1: "仇恨言论"
+
+hate_type_map:
+  "种族歧视": "racial"
+  "性别歧视": "gender"
+  "地域歧视": "regional"
+  "宗教歧视": "religious"
+  "其他": "other"

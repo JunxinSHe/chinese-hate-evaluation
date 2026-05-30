@@ -1,0 +1,49 @@
+model:
+  # 使用本地 GPTQ 模型
+  model_name_or_path: ./models/Qwen2___5-7B-Instruct-GPTQ-Int4
+
+training:
+  stage: sft
+  do_train: true
+  do_eval: true
+  finetuning_type: lora
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 4
+  learning_rate: 2e-5
+  max_grad_norm: 1.0
+  lr_scheduler_type: cosine
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  logging_steps: 10
+  save_strategy: epoch
+  evaluation_strategy: epoch
+  load_best_model_at_end: true
+  metric_for_best_model: f1
+  greater_is_better: true
+  fp16: true
+  gradient_checkpointing: true
+  report_to: none
+  seed: 42
+  # LoRA 参数
+  lora_r: 8
+  lora_alpha: 32
+  lora_dropout: 0.05
+  batch_size: 4
+  gradient_accumulation: 4
+  epochs: 3
+
+data:
+  dataset: hate_train
+  dataset_dir: ./results/processed_data
+  template: qwen
+  cutoff_len: 512
+  max_samples: null
+  val_size: 0.1
+
+output:
+  output_dir: ./results/custom_finetuned
+  logging_dir: ./logs
+  overwrite_output_dir: true
+  save_total_limit: 3

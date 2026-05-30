@@ -1,0 +1,12 @@
+
+base_model: "qwen3:8b"
+
+model_args:
+  load_in_4bit: true
+  trust_remote_code: true
+
+inference_args:
+  temperature: 0.0
+  max_new_tokens: 1
+  top_p: 0.9
+  stop: ["&lt;|im_end|&gt;"]
