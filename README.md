@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 中文仇恨识别评测工具
 
 ## 项目简介
@@ -79,3 +80,6 @@ python src/inference/ollama_infer.py \
 - dataset_config.yaml: 数据集配置
 - model_config.yaml: 模型配置
 - training_config.yaml: 训练参数配置
+=======
+# chinese-hate-evaluation
+>>>>>>> 19cb1a65338cc21bc15801df5a7804d8d416f32e
